@@ -23,9 +23,9 @@
                 {{ $srcset := delimit ($.Scratch.Get "srcset") "," }}
                 <a {{ printf "href=%q" ("/" | relLangURL) | safeHTMLAttr }}><img class="avatar" src="/{{ .Site.Params.avatar }}" {{ printf "srcset=%q" $srcset | safeHTMLAttr }}></a>
             {{ end }}
-            <a {{ printf "href=%q" ("/" | relLangURL) | safeHTMLAttr }}><div class="name">{{ .Site.Params.author }}</div></a>
-            {{ if .Site.Params.selfintro }}
-              <h3 class="self-intro">{{ .Site.Params.selfintro }}</h3>
+            <a {{ printf "href=%q" ("/" | relLangURL) | safeHTMLAttr }}><div class="name">{{ .Site.Params.title }}</div></a>
+            {{ if .Site.Params.intro }}
+              <h3 class="self-intro">{{ .Site.Params.intro }}</h3>
             {{ end }}
             <nav>
                 <ul>
