@@ -12,6 +12,14 @@
   </script>
 {{ end }}
 
+{{ if .Site.Params.jquery }}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{{ end }}
+
+{{range .Site.Params.customjs}}
+  <script type="text/javascript" src="{{.}}"></script>
+{{end}}
+
 {{ if .Site.Params.piwik }}
 <!-- Piwik -->
 <script type="text/javascript">
