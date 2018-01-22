@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="/css/reset.css?t={{$t}}">
     <link rel="stylesheet" href="/css/pygments.css?t={{$t}}">
     <link rel="stylesheet" href="/css/main.css?t={{$t}}">
-    {{range .Site.Params.extracssfiles}}
+    {{range .Site.Params.customcss}}
         <link rel="stylesheet" href="{{.}}?t={{$t}}">
     {{ end }}
 
@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/pygments.css">
     <link rel="stylesheet" href="/css/main.css">
-    {{range .Site.Params.extracssfiles}}
+    {{range .Site.Params.customcss}}
         <link rel="stylesheet" href="{{.}}">
     {{end}}
 
