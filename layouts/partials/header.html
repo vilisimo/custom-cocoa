@@ -30,7 +30,8 @@
             <nav>
                 <ul>
                     {{ range .Site.Menus.main }}
-                        <li class="nav-{{ .Identifier }}"><a href="{{ .URL | absLangURL }}">{{ .Pre }}<span>{{ .Name }}</span></a></li>
+                        {{- $isCurrent := ( or ( $.IsMenuCurrent "main" . ) ( $.HasMenuCurrent "main" . ) ) -}}
+                        <li class="nav-{{ .Identifier }} {{ if $isCurrent -}} nav-current {{- end }}"><a href="{{ .URL | absLangURL }}">{{ .Pre }}<span>{{ .Name }}</span></a></li>
                     {{ end }}
                 </ul>
             </nav>
