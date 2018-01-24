@@ -18,3 +18,6 @@
 
 - id: backToPosts
   translation: "Zurück zum Artikelverzeichnis"
+
+- id: noPosts
+  translation: "Keine Artikel"
